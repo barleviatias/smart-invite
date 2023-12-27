@@ -6,14 +6,16 @@ body {
     height: 100vh;
     margin: 0; /* Remove default margin */
 }
-
+h1{
+    text-align: center;
+}
 button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 60px;
     background-color: aqua;
 }
 
@@ -53,7 +55,7 @@ button:active {
 }
 #noBtn {
     position: absolute;
-    margin-left: 20px; /* Adjust margin */
+    margin-left: 40px; /* Adjust margin */
     transition: 0.5s;
 }
 
@@ -69,6 +71,6 @@ button:active {
     }
 
     #noBtn {
-        margin-left: 0; /* Reset margin for smaller screens */
+        margin-left: 20px; /* Reset margin for smaller screens */
     }
 }
