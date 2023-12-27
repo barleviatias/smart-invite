@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl">
+    <div class="container">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/a54c9596-f215-499b-8462-0d576cb5ff77/ZSaWWHkWfW.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+        
+<h1>רוצה לצאת איתי?</h1>
+        <div class="buttons">
+            <button class="btn" id="yesBtn" onclick="sayYes()" >YES</button>
+            <button class="btn" id="noBtn" onmouseover="moveButton()">NO</button>
+        </div>
+    </div>
+
+    <script>
+        function sayYes(){
+            window.location='yes.html'
+        }
+        function moveButton(){
+            console.log("move");
+            var x = Math.random() * (window.innerWidth - document.getElementById('noBtn').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noBtn').offsetHeight);
+            console.log(x);
+            console.log(y);
+            document.getElementById('noBtn').style.left = `${x}px`;
+            document.getElementById('noBtn').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
